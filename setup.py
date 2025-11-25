@@ -24,7 +24,15 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'log_node = log_node.log_node:main'
+            'log_node = log_node.log_node:main',
+            'log_node2 = log_node.log_node2:main',
+            'log_node3 = log_node.log_node3:main',
+            'image = log_node.image:main',
+            'aeb_full = log_node.aeb_full:main',
+            'aeb_full2 = log_node.aeb_full2:main',
+            'aeb_full3 = log_node.aeb_full3:main',
+            'aeb_full4 = log_node.aeb_full4:main',
+            'aeb_full5 = log_node.aeb_full5:main'
         ],
     },
 )

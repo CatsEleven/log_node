@@ -1,0 +1,39 @@
+running egg_info
+creating build/log_node/log_node.egg-info
+writing build/log_node/log_node.egg-info/PKG-INFO
+writing dependency_links to build/log_node/log_node.egg-info/dependency_links.txt
+writing entry points to build/log_node/log_node.egg-info/entry_points.txt
+writing requirements to build/log_node/log_node.egg-info/requires.txt
+writing top-level names to build/log_node/log_node.egg-info/top_level.txt
+writing manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+reading manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+writing manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build
+creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib
+creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+copying log_node/log_node2.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+copying log_node/log_node.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+copying log_node/__init__.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+running install
+running install_lib
+creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/log_node2.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/log_node.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/__init__.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/log_node2.py to log_node2.cpython-310.pyc
+byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/log_node.py to log_node.cpython-310.pyc
+byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index
+creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index
+creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index/packages
+copying resource/log_node -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index/packages
+copying package.xml -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/log_node
+running install_egg_info
+Copying build/log_node/log_node.egg-info to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node-0.0.0-py3.10.egg-info
+running install_scripts
+Installing log_node script to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/log_node
+Installing log_node2 script to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/log_node
+writing list of installed files to '/home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/install.log'

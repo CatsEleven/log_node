@@ -1,0 +1,41 @@
+[0.762s] Invoking command in '/home/kohei/Downloads/ros2_ws/src/log_node': PYTHONPATH=/home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/log_node build --build-base /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build install --record /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/install.log --single-version-externally-managed install_data
+[1.040s] running egg_info
+[1.040s] creating build/log_node/log_node.egg-info
+[1.040s] writing build/log_node/log_node.egg-info/PKG-INFO
+[1.041s] writing dependency_links to build/log_node/log_node.egg-info/dependency_links.txt
+[1.041s] writing entry points to build/log_node/log_node.egg-info/entry_points.txt
+[1.041s] writing requirements to build/log_node/log_node.egg-info/requires.txt
+[1.041s] writing top-level names to build/log_node/log_node.egg-info/top_level.txt
+[1.041s] writing manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+[1.043s] reading manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+[1.044s] writing manifest file 'build/log_node/log_node.egg-info/SOURCES.txt'
+[1.044s] running build
+[1.044s] running build_py
+[1.044s] creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build
+[1.044s] creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib
+[1.044s] creating /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+[1.044s] copying log_node/log_node2.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+[1.044s] copying log_node/log_node.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+[1.044s] copying log_node/__init__.py -> /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node
+[1.044s] running install
+[1.045s] running install_lib
+[1.045s] creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+[1.045s] copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/log_node2.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+[1.046s] copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/log_node.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+[1.046s] copying /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build/lib/log_node/__init__.py -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node
+[1.046s] byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/log_node2.py to log_node2.cpython-310.pyc
+[1.047s] byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/log_node.py to log_node.cpython-310.pyc
+[1.047s] byte-compiling /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node/__init__.py to __init__.cpython-310.pyc
+[1.048s] running install_data
+[1.048s] creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index
+[1.048s] creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index
+[1.048s] creating /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index/packages
+[1.048s] copying resource/log_node -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/ament_index/resource_index/packages
+[1.048s] copying package.xml -> /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/share/log_node
+[1.049s] running install_egg_info
+[1.050s] Copying build/log_node/log_node.egg-info to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages/log_node-0.0.0-py3.10.egg-info
+[1.051s] running install_scripts
+[1.072s] Installing log_node script to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/log_node
+[1.072s] Installing log_node2 script to /home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/log_node
+[1.072s] writing list of installed files to '/home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/install.log'
+[1.093s] Invoked command in '/home/kohei/Downloads/ros2_ws/src/log_node' returned '0': PYTHONPATH=/home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kohei/Downloads/ros2_ws/src/log_node/install/log_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/log_node build --build-base /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/build install --record /home/kohei/Downloads/ros2_ws/src/log_node/build/log_node/install.log --single-version-externally-managed install_data
