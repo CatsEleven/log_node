@@ -47,7 +47,6 @@ class AEBLoggerIPC(Node):
         # ---- IPC接続管理 ----
         self.conn = None
         self.last_conn_try = 0
-        # 起動時に一度接続を試みる（失敗しても落ちないようにする）
         self._try_connect_ipc()
 
         # ---- QoS設定 ----
@@ -67,26 +66,20 @@ class AEBLoggerIPC(Node):
 
     # --- IPC接続・送信関連 ---
     def _try_connect_ipc(self):
-        """受信側サーバーへの接続を試行する"""
         try:
             self.conn = Client(IPC_ADDRESS, authkey=IPC_AUTHKEY)
             self.get_logger().info("IPC: Connected to server.")
         except ConnectionRefusedError:
             self.conn = None
-            # 頻繁にログが出るとうるさいので、デバッグレベルか初回のみ推奨
-            # self.get_logger().warn("IPC: Server not found. Will retry later.")
 
     def _send_ipc_data(self, data_dict):
-        """データを送信する。切断されていたら再接続を試みる"""
         now = time.time()
-        
-        # 接続がない場合、1秒に1回程度再接続を試みる
         if self.conn is None:
             if now - self.last_conn_try > 1.0:
                 self.last_conn_try = now
                 self._try_connect_ipc()
             if self.conn is None:
-                return # 接続不可なら今回は諦める
+                return
 
         try:
             self.conn.send(data_dict)
@@ -117,7 +110,6 @@ class AEBLoggerIPC(Node):
             self.last_aeb_msg_time = self.get_clock().now()
 
             if not self.has_printed_first_log:
-                # ログ表示
                 v_val = self.current_velocity if self.current_velocity is not None else 0.0
                 p_val = self.current_pose.pose.position if self.current_pose else None
                 
@@ -125,7 +117,6 @@ class AEBLoggerIPC(Node):
                 print(f"★ FIRST AEB TRIGGER! Vel={v_val:.3f}")
                 print("="*80 + "\n")
 
-                # ★ IPC送信: 初動検知イベント
                 ipc_msg = {
                     "type": "AEB_TRIGGER",
                     "timestamp": datetime.now().isoformat(),
@@ -159,22 +150,22 @@ class AEBLoggerIPC(Node):
     def _save_image(self, msg: Image):
         try:
             img_bgr = self._to_bgr(msg)
-            ts_str = datetime.now().strftime("%H%M%S_%f")[:10]
-            filename = f"aeb_{self.image_count:05d}_{ts_str}.png"
+            
+            # --- 修正箇所: シンプルな連番ファイル名 ---
+            # image_countは0から始まるので、+1して "1.png" からスタートさせる
+            filename = f"{self.image_count + 1}.png"
             out_path = os.path.join(self.save_dir, filename)
 
             cv2.imwrite(out_path, img_bgr)
             
-            # コンソール出力
             vel_info = f"{self.current_velocity:.2f}" if self.current_velocity is not None else "N/A"
             print(f" [SAVED] {filename} (v={vel_info})")
             
-            # ★ IPC送信: 画像保存イベント
-            # 画像そのものではなく、パスとメタデータを送る
+            # IPC送信
             ipc_msg = {
                 "type": "IMAGE_SAVED",
                 "timestamp": datetime.now().isoformat(),
-                "path": out_path,      # 受信側はこれを開けば画像が見れる
+                "path": out_path,
                 "velocity": self.current_velocity,
                 "gnss": (self.current_pose.pose.position.x, self.current_pose.pose.position.y) if self.current_pose else None
             }
